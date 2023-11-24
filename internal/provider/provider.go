@@ -86,7 +86,7 @@ func (p *FreshProvider) Configure(ctx context.Context, req provider.ConfigureReq
 	}
 
 	if address == "" {
-		resp.Diagnostics.AddError("address is required", "Exmaple address: https://example.freshservice.com, cannot use CNAMES")
+		resp.Diagnostics.AddError("address is required", "Example address: https://example.freshservice.com, cannot use CNAMES")
 		return
 	}
 

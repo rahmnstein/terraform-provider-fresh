@@ -7,7 +7,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/datasource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	// "github.com/hashicorp/terraform-plugin-log/tflog"
 )
 
 var _ datasource.DataSource = &AssetDataSource{}
@@ -165,7 +164,7 @@ func (d *AssetDataSource) Configure(ctx context.Context, req datasource.Configur
 	d.client = client
 }
 
-// Read the data source and convert it into a resource object
+// Read the data source and convert it into a resource object.
 func (d *AssetDataSource) Read(ctx context.Context, req datasource.ReadRequest, resp *datasource.ReadResponse) {
 	var data AssetDataSourceModel
 

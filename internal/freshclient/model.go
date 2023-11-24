@@ -1,7 +1,7 @@
 package freshclient
 
 // Asset represents a FreshService asset
-// asset
+// asset.
 type Asset struct {
 	// AssetDetails
 	AssetDetails AssetDetails `json:"asset"`
@@ -26,7 +26,7 @@ type Asset struct {
 // name
 // updated_at
 // usage_type
-// user_id
+// user_id.
 type AssetDetails struct {
 	AgentID      int64  `json:"agent_id,omitempty"`
 	AssetTag     string `json:"asset_tag,omitempty"`
@@ -48,7 +48,7 @@ type AssetDetails struct {
 	UserID       int64  `json:"user_id,omitempty"`
 }
 
-// ToAssetDetailsUpdate converts an AssetDetails to AssetDetailsUpdate
+// ToAssetDetailsUpdate converts an AssetDetails to AssetDetailsUpdate.
 func (details AssetDetails) ToAssetDetailsUpdate() AssetDetailsUpdate {
 	return AssetDetailsUpdate{
 		AssetTag:     details.AssetTag,
@@ -90,7 +90,7 @@ type User struct {
 }
 
 // AssetType represents a FreshService asset type
-// asset_type
+// asset_type.
 type AssetType struct {
 	// AssetTypeDetails
 	AssetTypeDetails AssetTypeDetails `json:"asset_type"`
@@ -103,7 +103,7 @@ type AssetType struct {
 // name
 // parent_asset_type_id
 // updated_at
-// visible
+// visible.
 type AssetTypeDetails struct {
 	CreatedAt         string `json:"created_at"`
 	Description       string `json:"description"`
@@ -138,7 +138,7 @@ type AssetTypeDetails struct {
             "updated_at": "2019-02-14T10:03:02Z"
         }
     ]
-}
+}.
 */
 type AssetTypes struct {
 	AssetTypes []AssetTypeDetails `json:"asset_types"`

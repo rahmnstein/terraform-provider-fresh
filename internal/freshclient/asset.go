@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-// CreateAsset creates an asset in the FreshService API
+// CreateAsset creates an asset in the FreshService API.
 func (client *Client) CreateAsset(assetDetails AssetDetails) (*AssetDetails, error) {
 	// Make the request
 	resp, err := client.MakeRequest("POST", *client.APIEndpoint+"/assets", assetDetails)
@@ -22,7 +22,7 @@ func (client *Client) CreateAsset(assetDetails AssetDetails) (*AssetDetails, err
 	return &newAsset.AssetDetails, nil
 }
 
-// GetAsset gets an asset from the FreshService API
+// GetAsset gets an asset from the FreshService API.
 func (client *Client) GetAsset(assetDipslayID int64) (*AssetDetails, error) {
 	// Make the request
 	resp, err := client.MakeRequest("GET", *client.APIEndpoint+"/assets/"+strconv.FormatInt(assetDipslayID, 10), nil)
@@ -39,7 +39,7 @@ func (client *Client) GetAsset(assetDipslayID int64) (*AssetDetails, error) {
 	return &asset.AssetDetails, nil
 }
 
-// UpdateAsset updates an asset in the FreshService API
+// UpdateAsset updates an asset in the FreshService API.
 func (client *Client) UpdateAsset(assetDetails AssetDetails) (*AssetDetails, error) {
 
 	// Make the request
@@ -57,7 +57,7 @@ func (client *Client) UpdateAsset(assetDetails AssetDetails) (*AssetDetails, err
 	return &updatedAsset.AssetDetails, nil
 }
 
-// DeleteAsset deletes an asset from the FreshService API
+// DeleteAsset deletes an asset from the FreshService API.
 func (client *Client) DeleteAsset(assetDetails AssetDetails) error {
 	// Make the request
 	_, err := client.MakeRequest("DELETE", *client.APIEndpoint+"/assets/"+strconv.FormatInt(assetDetails.DisplayID, 10), nil)

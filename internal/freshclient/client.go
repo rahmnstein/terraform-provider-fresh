@@ -16,7 +16,7 @@ type Client struct {
 	APIEndpoint *string
 }
 
-// NewClient creates a new FreshClient
+// NewClient creates a new FreshClient.
 func NewClient(apiKey string, apiEndpoint string) *Client {
 	// Check if the API key and endpoint are set
 	if apiKey == "" || apiEndpoint == "" {
@@ -30,7 +30,7 @@ func NewClient(apiKey string, apiEndpoint string) *Client {
 	}
 }
 
-// MakeRequest makes a request to the FreshService API
+// MakeRequest makes a request to the FreshService API.
 func (client *Client) MakeRequest(method string, url string, body interface{}) (*http.Response, error) {
 	req := &http.Request{}
 	if body != nil {
@@ -94,7 +94,7 @@ func (e *APIError) Error() string {
 	return fmt.Sprintf("HTTP %d - %s: %s", e.Code, e.Text, e.Description)
 }
 
-// ErrorCode constants for common API errors
+// ErrorCode constants for common API errors.
 const (
 	ErrClientValidation        = 400
 	ErrAuthenticationFailure   = 401
@@ -108,7 +108,7 @@ const (
 	ErrUnexpectedServerError   = 500
 )
 
-// ErrorMessages map error codes to their respective error messages
+// ErrorMessages map error codes to their respective error messages.
 var ErrorMessages = map[int]string{
 	ErrClientValidation:        "Client or Validation Error",
 	ErrAuthenticationFailure:   "Authentication Failure",

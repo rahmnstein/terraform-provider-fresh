@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-// GetAssetType gets an asset type from the FreshService API
+// GetAssetType gets an asset type from the FreshService API.
 func (client *Client) GetAssetType(name string) (*AssetTypeDetails, error) {
 	resp, err := client.MakeRequest("GET", *client.APIEndpoint+"/asset_types/?per_page=600", nil)
 	if err != nil {

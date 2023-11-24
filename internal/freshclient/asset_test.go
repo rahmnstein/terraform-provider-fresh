@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-// TestAsset tests the UpdateAsset function
+// TestAsset tests the UpdateAsset function.
 func TestAsset(t *testing.T) {
 	// Check if env vars are set
 	if os.Getenv("FRESHDESK_API_KEY_TEST") == "" || os.Getenv("FRESHDESK_API_ENDPOINT_TEST") == "" {

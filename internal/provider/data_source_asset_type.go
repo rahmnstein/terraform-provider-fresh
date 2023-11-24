@@ -114,7 +114,7 @@ func (d *AssetTypeDataSource) Configure(ctx context.Context, req datasource.Conf
 	d.client = client
 }
 
-// Read the data source and convert it into a resource object
+// Read the data source and convert it into a resource object.
 func (d *AssetTypeDataSource) Read(ctx context.Context, req datasource.ReadRequest, resp *datasource.ReadResponse) {
 	var data AssetTypeDataSourceModel
 

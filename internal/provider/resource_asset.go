@@ -288,7 +288,7 @@ func (r *AssetResource) Create(ctx context.Context, req resource.CreateRequest, 
 	resp.Diagnostics.Append(resp.State.Set(ctx, &data)...)
 }
 
-// Read the resource and convert it into a resource object
+// Read the resource and convert it into a resource object.
 func (d *AssetResource) Read(ctx context.Context, req resource.ReadRequest, resp *resource.ReadResponse) {
 	var data AssetDataSourceModel
 
